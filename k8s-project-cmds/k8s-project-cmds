@@ -1,0 +1,45 @@
+# Cluster-connect/access k8s cluster -:
+# ====================================
+# Step-1 -:
+# ========
+# install aws-cli -:
+# -----------------
+#  > curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+#  > unzip awscliv2.zip
+#  > sudo ./aws/install
+
+# Step -2 -:
+# =========
+#  >  curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
+#  >  chmod +x ./kubectl
+#  >  sudo mv ./kubectl /usr/local/bin/kubectl
+#  >  kubectl version --client 
+
+# Step -3 -:
+# =========
+# > aws eks list-clusters --region region-name
+# > aws eks update-kubeconfig --region region-name --name cluster-1  > To change the cluster 
+# > kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1
+
+# HELM - CMDS -:
+# =============
+# helm repo list
+# helm repo list -n ns-name
+# helm list
+# helm list -n ns-name
+# helm delete releasename -n ns-name
+# helm install -f values.yaml release-name name/opentelemtry-collector -n ns-name
+# helm create <directory name> -: it'll create a new charts/directory and values.yaml and template folder and etc.
+# helm lint chart/directory-name  -: we can get the our chart's formatting or information.
+
+# K8s-CMDS -:
+# ===========
+# kubectl get ns
+# kubectl get po -n monitoring 
+# kubectl port-forward svc/prometheus-server 8090:80 -n ns-name
+# kubectl edit configmap ingress-nginx-controller -n ns-name -o yaml
+# kubectl get svc -n ingress-nginx
+# kubectl edit svc ingress-nginx-controller -n ns-name -o yaml
+# kubectl get deployment -n ns-name
+# kubectl config current-context   -: verifying the current cluster details.
+# kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1
