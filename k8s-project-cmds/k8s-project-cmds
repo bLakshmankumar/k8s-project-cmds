@@ -21,6 +21,8 @@
 # > aws eks update-kubeconfig --region region-name --name cluster-1     > To change the cluster 
 # > kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1
 # > aws sts get-caller-identity --query Account --output text           > To Get the aws account ID
+# > aws kms list-keys                                                   > To get the KMS key ID.
+
 
 # Eks cmds -:
 =============
