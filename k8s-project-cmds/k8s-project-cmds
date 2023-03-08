@@ -22,7 +22,9 @@
 # > kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1
 # > aws sts get-caller-identity --query Account --output text           > To Get the aws account ID
 # > aws kms list-keys                                                   > To get the KMS key ID.
-# > aws ec2 describe-volumes --region us-west-2 --query 'Volumes[*].[VolumeId]' --output text  > To list the ebs volume ids on a specific region.
+# > aws ec2 describe-volumes --region us-west-2 --query 'Volumes[*].[VolumeId]' --output text  > To list the ebs volume ids on a specific region. 
+# > aws ec2 describe-volumes --volume-ids vol-0525c15da2fe05901         > To get the complete information of a specific volume{creation time,size,region & etc}.
+
 
 
 # Eks cmds -:
