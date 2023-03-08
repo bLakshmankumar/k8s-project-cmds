@@ -18,8 +18,15 @@
 # Step -3 -:
 # =========
 # > aws eks list-clusters --region region-name
-# > aws eks update-kubeconfig --region region-name --name cluster-1  > To change the cluster 
+# > aws eks update-kubeconfig --region region-name --name cluster-1     > To change the cluster 
 # > kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1
+# > aws sts get-caller-identity --query Account --output text           > To Get the aws account ID
+
+# Eks cmds -:
+=============
+# eksctl get nodegroups --cluster=eks-devops-usw2-eks-poc                   > To know the cluster-node-group details.      
+# eksctl edit nodegroup --name=<node-group-name> --cluster=<cluster-name>   > To scaledown the k8s pods
+# eksctl scale nodegroup --cluster=eks-devops-usw2-eks-poc  --name=default-workerpool --nodes-min=2 --nodes-max=4 --nodes=3   -: scaleup-nodes
 
 # HELM - CMDS -:
 # =============
@@ -41,5 +48,13 @@
 # kubectl get svc -n ingress-nginx
 # kubectl edit svc ingress-nginx-controller -n ns-name -o yaml
 # kubectl get deployment -n ns-name
-# kubectl config current-context   -: verifying the current cluster details.
-# kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1
+# kubectl config current-context                                        -: To get the current cluster details.
+# kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1     -: 
+# kubectl get events --field-selector involvedObject.name=<pod-name>    -: To get the pod events
+# kubectl get storageclasses or sc -n ns-name                           -: To get the storage-class info
+# kubectl get sts -n ns-name                                             -: To get statefullset info
+# kubectl edit sts sts-name                                              -: To edit the sts info.
+# kubectl annotate storageclass aws-ebs storageclass.kubernetes.io/is-default-class=true   -: To set the volume as a default volume (replace storage class name with your storage-class-name) 
+
+
+
