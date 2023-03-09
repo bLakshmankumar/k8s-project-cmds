@@ -49,6 +49,7 @@
 # helm list -n ns-name
 # helm delete releasename -n ns-name
 # helm install -f values.yaml release-name name/opentelemtry-collector -n ns-name
+# helm upgrade --install elasticsearch elastic/elasticsearch  -f sts-values.yaml -n elk   {chart-name and repo name}
 # helm create <directory name> -: it'll create a new charts/directory and values.yaml and template folder and etc.
 # helm lint chart/directory-name  -: we can get the our chart's formatting or information.
 
