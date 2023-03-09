@@ -1,5 +1,13 @@
 # Cluster-connect/access k8s cluster -:
 # ====================================
+# Prerequisitions -:
+# =================
+# kubectl (Kubernetes command-line tool)
+# Helm (Kubernetes package manager)
+# AWS CLI (Amazon Web Services command-line interface)
+# EKS cluster with sufficient nodes and resources
+# A storage class provisioner (such as EBS or EFS) installed in your EKS cluster (if eks cluster)
+
 # Step-1 -:
 # ========
 # install aws-cli -:
