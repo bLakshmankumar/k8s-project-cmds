@@ -33,8 +33,6 @@
 # > aws ec2 describe-volumes --region us-west-2 --query 'Volumes[*].[VolumeId]' --output text  > To list the ebs volume ids on a specific region. 
 # > aws ec2 describe-volumes --volume-ids vol-0525c15da2fe05901         > To get the complete information of a specific volume{creation time,size,region & etc}.
 
-
-
 # Eks cmds -:
 =============
 # eksctl get nodegroups --cluster=eks-devops-usw2-eks-poc                   > To know the cluster-node-group details.      
@@ -78,4 +76,3 @@
 # kubectl get deployment cluster-autoscaler -n kube-system              -: verify whether a cluster autoscaler is enabled or not.
 # kubectl get deployment metrics-server -n kube-system                  -: To get the metric server info
 # kubectl get statefulset elasticsearch-master -o yaml -n elk > statefulset.yaml    -: To copy a file which is deployed using helm here i copy sts file to my local.
-
