@@ -53,6 +53,12 @@
 # helm create <directory name> -: it'll create a new charts/directory and values.yaml and template folder and etc.
 # helm lint chart/directory-name  -: we can get the our chart's formatting or information.
 
+#  Roll Back to the Previous Release in Helm -:
+# ---------------------------------------------
+# helm ls -A
+# helm history [release]
+# helm rollback [release] [revision] [flag]
+
 # K8s-CMDS -:
 # ===========
 # kubectl get ns
