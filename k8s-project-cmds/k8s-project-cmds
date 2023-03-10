@@ -71,4 +71,5 @@
 # kubectl annotate storageclass aws-ebs storageclass.kubernetes.io/is-default-class=true   -: To set the volume as a default volume (replace storage class name with your storage-class-name) 
 # kubectl get deployment cluster-autoscaler -n kube-system              -: verify whether a cluster autoscaler is enabled or not.
 # kubectl get deployment metrics-server -n kube-system                  -: To get the metric server info
+# kubectl get statefulset elasticsearch-master -o yaml -n elk > statefulset.yaml    -: To copy a file which is deployed using helm here i copy sts file to my local.
 
