@@ -35,8 +35,6 @@
 # > aws configure list-profiles                                         > List your current AWS CLI profiles 
 # 
 
-
-
 # Eks cmds -:
 =============
 # eksctl get nodegroups --cluster=eks-devops-usw2-eks-poc                   > To know the cluster-node-group details.      
@@ -63,6 +61,7 @@
 
 # K8s-CMDS -:
 # ===========
+# kubectl auth can-i get pods                                         -: To verify weather do we have an access for execute the kubectl commands or not
 # kubectl get ns
 # kubectl get po -n monitoring 
 # kubectl port-forward svc/prometheus-server 8090:80 -n ns-name
