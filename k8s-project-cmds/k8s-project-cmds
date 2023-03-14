@@ -61,15 +61,16 @@
 
 # K8s-CMDS -:
 # ===========
-# kubectl auth can-i get pods                                         -: To verify weather do we have an access for execute the kubectl commands or not
+# kubectl auth can-i get pods                                            -: To verify weather do we have an access for execute the kubectl commands or not
 # kubectl get ns
 # kubectl get po -n monitoring 
-# kubectl -n ns-name exec -it pod-name -- /bin/bash                    -: To Login to the pod 
+# kubectl -n ns-name exec -it pod-name -- /bin/bash                      -: To Login to the pod 
 # kubectl port-forward svc/prometheus-server 8090:80 -n ns-name
 # kubectl edit configmap ingress-nginx-controller -n ns-name -o yaml
 # kubectl get svc -n ingress-nginx
 # kubectl edit svc ingress-nginx-controller -n ns-name -o yaml
 # kubectl get deployment -n ns-name
+# kubectl top pods -n elastic                                           -: To check the pod resource utilizations
 # kubectl config current-context                                        -: To get the current cluster details.
 # kubectl config use arn:aws:eks:region:arn-number:cluster/cluster1     -: 
 # kubectl get events --field-selector involvedObject.name=<pod-name>    -: To get the pod events
