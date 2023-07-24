@@ -63,7 +63,8 @@
 # ===========
 # kubectl auth can-i get pods                                            -: To verify weather do we have an access for execute the kubectl commands or not
 # kubectl get ns
-# kubectl get po -n monitoring 
+# kubectl get po -n monitoring
+# kubectl get pods -v=7                                                   -: Use this verbo statement to know the pod information, what happens in the pod background, like statuscode, Api server connectivity and other details.
 # kubectl -n ns-name exec -it pod-name -- /bin/bash                      -: To Login to the pod 
 # kubectl port-forward svc/prometheus-server 8090:80 -n ns-name
 # kubectl edit configmap ingress-nginx-controller -n ns-name -o yaml
