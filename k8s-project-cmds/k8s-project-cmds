@@ -66,6 +66,8 @@
 # kubectl get po -n monitoring
 # kubectl get pods -v=7                                                  -: Use this verbo statement to know the pod information, what happens in the pod background, like statuscode, Api server connectivity and other details. this way we can understand how kubectl communicate to api server.
 # kubectl get pods -o wide                                               -: To get pod information with ipaddresses
+# kubectl get svc -n nsname                                              -: To list the svc on a specific ns
+# kubectl get svc -v=9                                                   -: To know that how traffic is going/reached to source to destination.
 # kubectl -n ns-name exec -it pod-name -- /bin/bash                      -: To Login to the pod 
 # kubectl port-forward svc/prometheus-server 8090:80 -n ns-name
 # kubectl edit configmap ingress-nginx-controller -n ns-name -o yaml
