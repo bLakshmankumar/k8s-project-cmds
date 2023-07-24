@@ -68,6 +68,7 @@
 # kubectl get pods -o wide                                               -: To get pod information with ipaddresses
 # kubectl get svc -n nsname                                              -: To list the svc on a specific ns
 # kubectl get svc -v=9                                                   -: To know that how traffic is going/reached to source to destination.
+# kubectl edit svc svc-name -n ns-name                                   -: Edit the svc through command prompt.
 # kubectl -n ns-name exec -it pod-name -- /bin/bash                      -: To Login to the pod 
 # kubectl port-forward svc/prometheus-server 8090:80 -n ns-name
 # kubectl edit configmap ingress-nginx-controller -n ns-name -o yaml
