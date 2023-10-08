@@ -14,6 +14,11 @@
       then i replace the value on /tmp/ubunutu.yml
       Then execute this below command to override the changes.
       kubectl replace --force -f /tmp/ubuntu.yml > It will delete old pod and create a new pods with updated details.
+6) Create a new configmap for the webapp pod. use spec given below.
+     > Configmap Name : webapp-configmap
+     > Data : APP_COLOR=darkblue
+     > Data : APP_OTHER=disregard
+   Command : kubectl create config webapp-configmap --from-literal=APP_COLOR=darkdlue --from-literal=APP_OTHER=disregard
     
   
 
