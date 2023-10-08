@@ -7,4 +7,13 @@
 4) Create a Service named redis-service of type ClusterIP to expose pod redis on port 6379 ?
    > kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
      (This will automatically use the pod's labels as selectors)
+5) Some objectives we can't edit in k8s, ex ?
+    Update pod ubuntu.yaml to sleep for 2000 seconds ?
+      while i try to edit the ubuntu pod using : kubectl edit po podname 
+      it gave the forbidden error ? with file name /tmp/ubuntu.yml
+      then i replace the value on /tmp/ubunutu.yml
+      Then execute this below command to override the changes.
+      kubectl replace --force -f /tmp/ubuntu.yml > It will delete old pod and create a new pods with updated details.
+    
+  
 
